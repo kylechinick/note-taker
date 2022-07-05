@@ -1,0 +1,66 @@
+body {
+  background-color: rgb(196, 218, 203);
+  font-family: 'Old Standard TT', serif;
+}
+
+h1 {
+  font-weight:bold;
+  margin-bottom: 40px;
+  font-size: 50px;
+}
+
+.container {
+    border-radius: 25px;
+    background-color: rgb(244, 250, 245);
+    padding: 7%;
+    width: 70%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+    display: block;
+    text-align: center;
+    border-style: double;
+    border-width: 5px;
+    border-color: gainsboro;
+    box-sizing: border-box;
+  }
+
+  #amount {
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+    font-family: 'Old Standard TT', serif;
+    text-align: center;
+    font-size: medium;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #currency {
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+    font-family: 'Old Standard TT', serif;
+    text-align: center;
+    font-size: medium;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+button {
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    font-family: 'Old Standard TT', serif;
+    text-align: center;
+    font-size: medium;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: black;
+    color: white;
+    border-style: double;
+    border-width: 5px;
+    border-color: gainsboro;
+    box-sizing: border-box;
+  }
