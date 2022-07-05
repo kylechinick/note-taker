@@ -1,7 +1,7 @@
-# _ _
-#### Contributors: _****_
+# _ Note-Taker _
+#### Contributors: _**Kai Kohlsdorf, Matt Wilkinson, Sandra Tena, Kyle Chinick, Claire Thorington**_
 
-#### _ _
+#### _ A note-taking app _
 
 
 ## Technologies Used
@@ -30,4 +30,4 @@
 
 _MIT_
 
-Copyright (c) _2022_ __
+Copyright (c) _2022_ _Kai Kohlsdorf, Matt Wilkinson, Sandra Tena, Kyle Chinick, Claire Thorington_
