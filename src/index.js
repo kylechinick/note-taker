@@ -61,7 +61,7 @@ function displayNoteDetails(NoteBookToDisplay) {
 
 function showNote(noteId) {
   const note = noteBook.findNote(noteId);
-  $("#show-note").show();
+  $("#show-note").toggle();
   $(".title").html(note.title);
   $(".date").html(note.date);
   $(".topic").html(note.topic);
@@ -90,7 +90,7 @@ $(document).ready(function () {
     console.log(noteBook);
     const inputtedTitle = $("input#new-title").val();
     const inputtedDate = $("input#new-date").val();
-    const inputtedTopic = $("input#new-topic").val();
+    const inputtedTopic = $("select#new-topic").val();
     const inputtedContent = $("input#new-content").val();
     $("input#new-title").val("");
     $("input#new-date").val("");
@@ -100,6 +100,5 @@ $(document).ready(function () {
     const newNote = new Note(inputtedTitle, inputtedDate, inputtedTopic, inputtedContent);
     noteBook.addNote(newNote);
     displayNoteDetails(noteBook);
-    showNote(noteId);
   });
 });
