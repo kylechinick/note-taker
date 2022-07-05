@@ -1,5 +1,20 @@
 body {
-  background-color: rgb(224, 246, 254);
+  background-color: rgb(153, 177, 158);
+  font-family: 'Old Standard TT', serif;
+}
+
+.default {
+  background-color: rgb(153, 177, 158);
+  font-family: 'Old Standard TT', serif;
+}
+
+.leopard {
+  background-image: url("https://i.pinimg.com/originals/ba/60/9d/ba609dcf7e7e78e9fa4198b392c138db.jpg");
+  font-family: 'Old Standard TT', serif;
+}
+
+.lisa {
+  background-image: url("https://cdn.wallpapersafari.com/6/46/qaJsDY.jpg");
   font-family: 'Old Standard TT', serif;
 }
 
@@ -13,11 +28,11 @@ h1 {
     border-radius: 25px;
     background-color: rgb(243, 252, 255);
     padding: 7%;
-    width: 70%;
+    width: 90%;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 75px;
+    margin-top: 25px;
     display: block;
     text-align: left;
     border-style: double;
@@ -40,7 +55,7 @@ h1 {
 
   #new-content {
     width: 100%;
-    height: 300px;
+    height: 200px;
     border-radius: 5px;
     font-family: 'Old Standard TT', serif;
     text-align: left;
@@ -52,7 +67,7 @@ h1 {
 
 button {
     width: 200px;
-    height: 50px;
+    height: 30px;
     border-radius: 5px;
     font-family: 'Old Standard TT', serif;
     text-align: center;
@@ -65,6 +80,57 @@ button {
     border-width: 5px;
     border-color: gainsboro;
     box-sizing: border-box;
+  }
+
+  .default-btn {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    font-family: 'Old Standard TT', serif;
+    text-align: center;
+    font-size: medium;
+    margin-top: 20px;
+    background-color: rgb(153, 177, 158);
+    color: white;
+    border-style: double;
+    border-width: 5px;
+    border-color: gainsboro;
+    box-sizing: border-box;
+    font-size: 10px;
+  }
+
+  .leopard-btn {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    font-family: 'Old Standard TT', serif;
+    text-align: center;
+    font-size: medium;
+    margin-top: 20px;
+    background-image: url("https://i.pinimg.com/originals/ba/60/9d/ba609dcf7e7e78e9fa4198b392c138db.jpg");
+    color: white;
+    border-style: double;
+    border-width: 5px;
+    border-color: gainsboro;
+    box-sizing: border-box;
+    font-size: 10px;
+  }
+
+  .lisa-btn {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    font-family: 'Old Standard TT', serif;
+    text-align: center;
+    font-size: medium;
+    margin-top: 20px;
+    background-image: url("http://wallpaperset.com/w/full/c/e/0/20779.jpg");
+    color: white;
+    border-style: double;
+    border-width: 5px;
+    border-color: gainsboro;
+    box-sizing: border-box;
+    font-size: 10px;
   }
 
   #show-note {

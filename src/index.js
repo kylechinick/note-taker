@@ -100,5 +100,20 @@ $(document).ready(function () {
     const newNote = new Note(inputtedTitle, inputtedDate, inputtedTopic, inputtedContent);
     noteBook.addNote(newNote);
     displayNoteDetails(noteBook);
+
+    $("button#default-btn").click(function() {
+      $("body").removeClass();
+      $("body").addClass("default");
+    });
+  
+    $("button#leopard-btn").click(function() {
+      $("body").removeClass();
+      $("body").addClass("leopard");
+    });
+
+    $("button#lisa-btn").click(function() {
+      $("body").removeClass();
+      $("body").addClass("lisa");
+    });
   });
 });
