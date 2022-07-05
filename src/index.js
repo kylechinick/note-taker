@@ -1,92 +1,105 @@
-// Business Logic for AddressBook ---------
-function AddressBook() {
-  this.contacts = {};
+import $ from 'jquery';
+import './css/styles.css';
+
+let noteBook = new NoteBook();
+
+// Business Logic for NoteBook ---------
+function NoteBook() {
+  this.entries = {};
   this.currentId = 0;
 }
 
-AddressBook.prototype.addContact = function(contact) {
-  contact.id = this.assignId();
-  this.contacts[contact.id] = contact;
+NoteBook.prototype.addNote = function (note) {
+  note.id = this.assignId();
+  this.entries[note.id] = note;
 };
 
-AddressBook.prototype.assignId = function() {
+NoteBook.prototype.assignId = function () {
   this.currentId += 1;
   return this.currentId;
 };
 
-AddressBook.prototype.findContact = function(id) {
-  if (this.contacts[id] != undefined) {
-    return this.contacts[id];
+NoteBook.prototype.findNote = function (id) {
+  if (this.entries[id] != undefined) {
+    return this.entries[id];
   }
   return false;
 };
 
-AddressBook.prototype.deleteContact = function(id) {
-  if (this.contacts[id] === undefined) {
+NoteBook.prototype.deleteNote = function (id) {
+  if (this.entries[id] === undefined) {
     return false;
   }
-  delete this.contacts[id];
+  delete this.entries[id];
   return true;
 };
 
-// Business Logic for Contacts ---------
-function Contact(firstName, lastName, phoneNumber) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.phoneNumber = phoneNumber;
+// Business Logic for Notes ---------
+function Note(title, date, topic, content) {
+  this.title = title;
+  this.date = date;
+  this.topic = topic;
+  this.content = content;
 }
 
-Contact.prototype.fullName = function() {
-  return this.firstName + " " + this.lastName;
+Note.prototype.title = function () {
+  return this.title;
 };
 
 // User Interface Logic ---------
-let addressBook = new AddressBook();
 
-function displayContactDetails(addressBookToDisplay) {
-  let contactsList = $("ul#contacts");
-  let htmlForContactInfo = "";
-  Object.keys(addressBookToDisplay.contacts).forEach(function(key) {
-    const contact = addressBookToDisplay.findContact(key);
-    htmlForContactInfo += "<li id=" + contact.id + ">" + contact.firstName + " " + contact.lastName + "</li>";
+
+function displayNoteDetails(NoteBookToDisplay) {
+  let entriesList = $("ul#entries");
+  let htmlForNoteInfo = "";
+  Object.keys(NoteBookToDisplay.entries).forEach(function (key) {
+    const note = NoteBookToDisplay.findNote(key);
+    htmlForNoteInfo += "<li id=" + note.id + ">" + note.title + " " + "</li>";
   });
-  contactsList.html(htmlForContactInfo);
+  entriesList.html(htmlForNoteInfo);
 }
 
-function showContact(contactId) {
-  const contact = addressBook.findContact(contactId);
-  $("#show-contact").show();
-  $(".first-name").html(contact.firstName);
-  $(".last-name").html(contact.lastName);
-  $(".phone-number").html(contact.phoneNumber);
+function showNote(noteId) {
+  const note = noteBook.findNote(noteId);
+  $("#show-note").show();
+  $(".title").html(note.title);
+  $(".date").html(note.date);
+  $(".topic").html(note.topic);
+  $(".content").html(note.content);
+
   let buttons = $("#buttons");
   buttons.empty();
-  buttons.append("<button class='deleteButton' id=" +  + contact.id + ">Delete</button>");
+  buttons.append("<button class='deleteButton' id=" + + note.id + ">Delete</button>");
 }
 
 function attachContactListeners() {
-  $("ul#contacts").on("click", "li", function() {
-    showContact(this.id);
+  $("ul#entries").on("click", "li", function () {
+    showNote(this.id);
   });
-  $("#buttons").on("click", ".deleteButton", function() {
-    addressBook.deleteContact(this.id);
-    $("#show-contact").hide();
-    displayContactDetails(addressBook);
+  $("#buttons").on("click", ".deleteButton", function () {
+    noteBook.deleteNote(this.id);
+    $("#show-note").hide();
+    displayNoteDetails(noteBook);
   });
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
   attachContactListeners();
-  $("form#new-contact").submit(function(event) {
+  $("form#new-note").submit(function (event) {
     event.preventDefault();
-    var inputtedFirstName = $("input#new-first-name").val();
-    var inputtedLastName = $("input#new-last-name").val();
-    var inputtedPhoneNumber = $("input#new-phone-number").val();
-    $("input#new-first-name").val("");
-    $("input#new-last-name").val("");
-    $("input#new-phone-number").val("");
-    var newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
-    addressBook.addContact(newContact);
-    displayContactDetails(addressBook);
+    console.log(noteBook);
+    const inputtedTitle = $("input#new-title").val();
+    const inputtedDate = $("input#new-date").val();
+    const inputtedTopic = $("input#new-topic").val();
+    const inputtedContent = $("input#new-content").val();
+    $("input#new-title").val("");
+    $("input#new-date").val("");
+    $("input#new-topic").val("");
+    $("input#new-content").val("");
+
+    const newNote = new Note(inputtedTitle, inputtedDate, inputtedTopic, inputtedContent);
+    noteBook.addNote(newNote);
+    displayNoteDetails(noteBook);
+    showNote(noteId);
   });
 });
