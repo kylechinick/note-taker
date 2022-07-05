@@ -84,6 +84,21 @@ function attachContactListeners() {
 }
 
 $(document).ready(function () {
+  
+  $("button#default-btn").click(function() {
+    $("body").removeClass();
+    $("body").addClass("default");
+  });
+
+  $("button#leopard-btn").click(function() {
+    $("body").removeClass();
+    $("body").addClass("leopard");
+  });
+
+  $("button#lisa-btn").click(function() {
+    $("body").removeClass();
+    $("body").addClass("lisa");
+  });
   attachContactListeners();
   $("form#new-note").submit(function (event) {
     event.preventDefault();
@@ -101,19 +116,5 @@ $(document).ready(function () {
     noteBook.addNote(newNote);
     displayNoteDetails(noteBook);
 
-    $("button#default-btn").click(function() {
-      $("body").removeClass();
-      $("body").addClass("default");
-    });
-  
-    $("button#leopard-btn").click(function() {
-      $("body").removeClass();
-      $("body").addClass("leopard");
-    });
-
-    $("button#lisa-btn").click(function() {
-      $("body").removeClass();
-      $("body").addClass("lisa");
-    });
   });
 });
