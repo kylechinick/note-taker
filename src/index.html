@@ -1,1 +1,54 @@
-<!-- test code -->
+<html>
+  <head>
+    <title>Note Book</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Note Book</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <hr>
+          <h2>Add a new note:</h2>
+          <form id="new-note">
+            <div class="form-group">
+              <label for="new-title">Title</label>
+              <br>
+              <input type="text"  class="form-control" id="new-title">
+            </div>
+            <div class="form-group">
+              <label for="new-date">Date</label>
+              <br>
+              <input type="text"  class="form-control" id="new-date">
+            </div>
+            <div class="form-group">
+              <label for="new-topic">Topic</label>
+              <br>
+              <input type="text"  class="form-control" id="new-topic">
+            </div>
+            <div class="form-group">
+              <label for="new-content">Content</label>
+              <br>
+              <input type="text-area"  class="form-control" id="new-content">
+            </div>
+            </div>
+            <button type="submit" class="btn-primary">Add</button>
+          </form>
+          <hr>
+          <h2>Entries</h2>
+          <ul id="entries">
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div id="show-note">
+            <p>Note: <span class="saved-note"></span></p>
+            <div id="buttons">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
