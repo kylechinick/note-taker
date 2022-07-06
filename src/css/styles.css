@@ -2,7 +2,7 @@ body {
   background-color: black;
   background-image: url("https://i.pinimg.com/736x/b1/23/d6/b123d670a63a1bb746971e43327e622b.jpg");
   font-family: 'Old Standard TT', serif;
-  
+
 }
 
 .navbar {
@@ -19,13 +19,16 @@ body {
   box-sizing: border-box;
   position: fixed;
   z-index: 1;
-  top: 0; 
+  top: 0;
   left: 0;
   border-radius: 25px;
-  
+
 }
 
-nav a:link, nav a:visited, nav a:hover, nav a:active {
+nav a:link,
+nav a:visited,
+nav a:hover,
+nav a:active {
   color: white;
   padding: 14px 25px;
   text-align: center;
@@ -42,25 +45,25 @@ nav a:link, nav a:visited, nav a:hover, nav a:active {
   box-sizing: border-box;
   padding: 10px;
   border-radius: 10px;
-  
+
 }
 
 .default {
   background-color: black;
   font-family: 'Old Standard TT', serif;
- 
+
 }
 
 .leopard {
   background-image: url("https://i.pinimg.com/originals/ba/60/9d/ba609dcf7e7e78e9fa4198b392c138db.jpg");
   font-family: 'Old Standard TT', serif;
- 
+
 }
 
 .lisa {
   background-image: url("https://cdn.wallpapersafari.com/6/46/qaJsDY.jpg");
   font-family: 'Old Standard TT', serif;
- 
+
 }
 
 h1 {
@@ -74,29 +77,29 @@ h1 {
   box-sizing: border-box;
   padding: 10px;
   border-radius: 10px;
-  
+
 
 }
 
 h2 {
   font-weight: bold;
   font-size: 30px;
- 
-  
+
+
 
 }
 
 h3 {
   font-weight: bold;
   font-size: 20px;
-  
- 
+
+
 }
 
 .container {
   border-radius: 25px;
   background-color: white;
-  background-image: url("https://i.pinimg.com/originals/e4/77/f6/e477f6562584731a35dffb3a5380208c.jpg");
+  background-image: url(assets/images/lines.jpg);
   background-size: 100%;
   padding: 5%;
   position: relative;
@@ -111,10 +114,10 @@ h3 {
   max-width: 75%;
   text-align: left;
   height: auto;
-  width: auto\9; 
+  width: auto\9;
   position: relative;
   z-index: 1;
-  
+
 }
 
 #new-title,
@@ -128,9 +131,9 @@ h3 {
   text-align: left;
   font-size: 20px;
   padding: 5px;
-  
+
   text-align: center;
-  
+
 }
 
 #new-content {
@@ -141,8 +144,8 @@ h3 {
   text-align: left;
   font-size: medium;
   padding: 5px;
-  
- 
+
+
 }
 
 .btn-primary {
@@ -160,7 +163,7 @@ h3 {
   border-width: 5px;
   border-color: gainsboro;
   box-sizing: border-box;
- 
+
 }
 
 #default-btn {
@@ -177,7 +180,7 @@ h3 {
   border-color: gainsboro;
   box-sizing: border-box;
   font-size: 12px;
-  
+
 }
 
 #leopard-btn {
@@ -195,7 +198,7 @@ h3 {
   border-color: gainsboro;
   box-sizing: border-box;
   font-size: 12px;
-  
+
 }
 
 #lisa-btn {
@@ -213,29 +216,28 @@ h3 {
   border-color: gainsboro;
   box-sizing: border-box;
   font-size: 12px;
-  
+
 }
 
-#save, .deleteButton {
-    width: 100px;
-    height: 25px;
-    border-radius: 5px;
-    font-family: 'Old Standard TT', serif;
-    text-align: center;
-    font-size: medium;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    background-color: black;
-    color: white;
-    border-style: double;
-    border-width: 5px;
-    border-color: gainsboro;
-    box-sizing: border-box;
-    font-size: 12px;
-    
-  }
+#save,
+.deleteButton {
+  width: 100px;
+  height: 25px;
+  border-radius: 5px;
+  font-family: 'Old Standard TT', serif;
+  text-align: center;
+  font-size: medium;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: black;
+  color: white;
+  border-style: double;
+  border-width: 5px;
+  border-color: gainsboro;
+  box-sizing: border-box;
+  font-size: 12px;
 
-
+}
 
 #show-note {
   display: none;
@@ -247,13 +249,13 @@ h3 {
   border-width: 5px;
   border-color: gainsboro;
   box-sizing: border-box;
- 
+
 }
 
 #instructions {
   font-size: 12px;
   font-style: italic;
-  
+
 }
 
 .theme-buttons {
