@@ -1,23 +1,56 @@
 body {
-  background-color: rgb(224, 246, 254);
+  background-color: black;
+  background-image: url("https://i.pinimg.com/736x/b1/23/d6/b123d670a63a1bb746971e43327e622b.jpg");
+  font-family: 'Old Standard TT', serif;
+}
+
+.default {
+  background-color: black;
+  font-family: 'Old Standard TT', serif;
+}
+
+.leopard {
+  background-image: url("https://i.pinimg.com/originals/ba/60/9d/ba609dcf7e7e78e9fa4198b392c138db.jpg");
+  font-family: 'Old Standard TT', serif;
+}
+
+.lisa {
+  background-image: url("https://cdn.wallpapersafari.com/6/46/qaJsDY.jpg");
   font-family: 'Old Standard TT', serif;
 }
 
 h1 {
   font-weight: bold;
-  margin-bottom: 40px;
   font-size: 50px;
+  background-color: white;
+
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 30px;
+  background-color: white;
+
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 20px;
+  background-color: white;
+ 
 }
 
 .container {
   border-radius: 25px;
-  background-color: rgb(243, 252, 255);
+  background-color: white;
+  /* background-image: url("https://i.etsystatic.com/26706693/r/il/8baf51/2938976582/il_fullxfull.2938976582_s8th.jpg"); */
+  background-size: 100%;
   padding: 7%;
   width: 70%;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 75px;
+  margin-top: 25px;
   display: block;
   text-align: left;
   border-style: double;
@@ -30,30 +63,29 @@ h1 {
 #new-date,
 #new-topic,
 #new-content {
-  width: 100%;
-  height: 40px;
+  width: 50%;
+  height: 35px;
   border-radius: 5px;
   font-family: 'Old Standard TT', serif;
   text-align: left;
-  font-size: medium;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 10px;
+  font-size: 20px;
+  padding: 5px;
+  background-color: white;
+  text-align: center;
 }
 
 #new-content {
   width: 100%;
-  height: 300px;
+  height: 200px;
   border-radius: 5px;
   font-family: 'Old Standard TT', serif;
   text-align: left;
   font-size: medium;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 10px;
+  padding: 5px;
+  background-color: white;
 }
 
-button {
+.btn-primary {
   width: 200px;
   height: 50px;
   border-radius: 5px;
@@ -70,6 +102,93 @@ button {
   box-sizing: border-box;
 }
 
+#default-btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  font-family: 'Old Standard TT', serif;
+  text-align: center;
+  font-size: medium;
+  margin-top: 20px;
+  color: white;
+  border-style: double;
+  border-width: 5px;
+  border-color: gainsboro;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+#leopard-btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  font-family: 'Old Standard TT', serif;
+  text-align: center;
+  font-size: medium;
+  margin-top: 20px;
+  background-image: url("https://i.pinimg.com/originals/ba/60/9d/ba609dcf7e7e78e9fa4198b392c138db.jpg");
+  color: white;
+  border-style: double;
+  border-width: 5px;
+  border-color: gainsboro;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+#lisa-btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  font-family: 'Old Standard TT', serif;
+  text-align: center;
+  font-size: medium;
+  margin-top: 20px;
+  background-image: url("http://wallpaperset.com/w/full/c/e/0/20779.jpg");
+  color: white;
+  border-style: double;
+  border-width: 5px;
+  border-color: gainsboro;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+#save, .deleteButton {
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    font-family: 'Old Standard TT', serif;
+    text-align: center;
+    font-size: medium;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: black;
+    color: white;
+    border-style: double;
+    border-width: 5px;
+    border-color: gainsboro;
+    box-sizing: border-box;
+    font-size: 12px;
+  }
+
+
+
 #show-note {
   display: none;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  padding: 20px;
+  border-style: double;
+  border-width: 5px;
+  border-color: gainsboro;
+  box-sizing: border-box;
+}
+
+#instructions {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.theme-buttons {
+  text-align: center;
 }
