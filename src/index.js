@@ -50,21 +50,30 @@ Note.prototype.title = function () {
 
 // User Interface Logic ---------
 
-function displayNoteDetails(NoteBookToDisplay) {
+function displayNoteDetails() {
   let entriesList = $('ul#entries');
   let htmlForNoteInfo = '';
-  Object.keys(NoteBookToDisplay.entries).forEach(function (key) {
-    const note = NoteBookToDisplay.findNote(key);
+  Object.keys(noteBook.entries).forEach(function (key) {
+    const note = noteBook.findNote(key);
     htmlForNoteInfo += '<li id=' + note.id + '>' + note.title + ' ' + '</li>';
   });
   entriesList.html(htmlForNoteInfo);
 }
+// function displayNoteDetails(NoteBookToDisplay) {
+//   let entriesList = $('ul#entries');
+//   let htmlForNoteInfo = '';
+//   Object.keys(NoteBookToDisplay.entries).forEach(function (key) {
+//     const note = NoteBookToDisplay.findNote(key);
+//     htmlForNoteInfo += '<li id=' + note.id + '>' + note.title + ' ' + '</li>';
+//   });
+//   entriesList.html(htmlForNoteInfo);
+// }
 
 function showNote(noteId) {
   const note = noteBook.findNote(noteId);
   $('#show-note').toggle();
   $('.title').html(note.title);
-  $('.date').html(note.date);
+  // $('.date').html(note.date);
   $('.topic').html(note.topic);
   $('.content').html(note.content);
 
@@ -113,10 +122,11 @@ function attachContactListeners() {
 
   $('button#delete-btn').click(function () {
     localStorage.removeItem('noteBookKey');
+    $('ul#entries').html('');
+    noteBook.entries = {};
+    noteBook.currentId = 0;
   });
 }
-
-
 
 $(document).ready(function () {
   attachContactListeners();
