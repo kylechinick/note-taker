@@ -106,7 +106,8 @@ $(document).ready(function () {
     const inputtedTitle = $("input#new-title").val();
     const inputtedDate = $("input#new-date").val();
     const inputtedTopic = $("select#new-topic").val();
-    const inputtedContent = $("input#new-content").val();
+    const inputtedContent = $("#new-content").val();
+    console.log(inputtedContent);
     $("input#new-title").val("");
     $("input#new-date").val("");
     $("input#new-topic").val("");

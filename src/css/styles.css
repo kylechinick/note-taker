@@ -1,10 +1,11 @@
 body {
-  background-color: rgb(153, 177, 158);
+  background-color: black;
+  background-image: url("https://i.pinimg.com/736x/b1/23/d6/b123d670a63a1bb746971e43327e622b.jpg");
   font-family: 'Old Standard TT', serif;
 }
 
 .default {
-  background-color: rgb(153, 177, 158);
+  background-color: black;
   font-family: 'Old Standard TT', serif;
 }
 
@@ -19,120 +20,127 @@ body {
 }
 
 h1 {
-  font-weight:bold;
+  font-weight: bold;
   margin-bottom: 40px;
   font-size: 50px;
 }
 
 .container {
-    border-radius: 25px;
-    background-color: rgb(243, 252, 255);
-    padding: 7%;
-    width: 90%;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25px;
-    display: block;
-    text-align: left;
-    border-style: double;
-    border-width: 5px;
-    border-color: gainsboro;
-    box-sizing: border-box;
-  }
+  border-radius: 25px;
+  background-color: rgb(243, 252, 255);
+  padding: 7%;
+  width: 90%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  display: block;
+  text-align: left;
+  border-style: double;
+  border-width: 5px;
+  border-color: gainsboro;
+  box-sizing: border-box;
+}
 
-  #new-title, #new-date, #new-topic, #new-content {
-    width: 100%;
-    height: 40px;
-    border-radius: 5px;
-    font-family: 'Old Standard TT', serif;
-    text-align: left;
-    font-size: medium;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-  }
+#new-title,
+#new-date,
+#new-topic,
+#new-content {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  font-family: 'Old Standard TT', serif;
+  text-align: left;
+  font-size: medium;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
 
-  #new-content {
-    width: 100%;
-    height: 200px;
-    border-radius: 5px;
-    font-family: 'Old Standard TT', serif;
-    text-align: left;
-    font-size: medium;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-  }
+#new-content {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  font-family: 'Old Standard TT', serif;
+  text-align: left;
+  font-size: medium;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
 
-button {
-    width: 200px;
-    height: 30px;
-    border-radius: 5px;
-    font-family: 'Old Standard TT', serif;
-    text-align: center;
-    font-size: medium;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: black;
-    color: white;
-    border-style: double;
-    border-width: 5px;
-    border-color: gainsboro;
-    box-sizing: border-box;
-  }
+.btn-primary {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  font-family: 'Old Standard TT', serif;
+  text-align: center;
+  font-size: medium;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: black;
+  color: white;
+  border-style: double;
+  border-width: 5px;
+  border-color: gainsboro;
+  box-sizing: border-box;
+}
 
-  .default-btn {
-    width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    font-family: 'Old Standard TT', serif;
-    text-align: center;
-    font-size: medium;
-    margin-top: 20px;
-    background-color: rgb(153, 177, 158);
-    color: white;
-    border-style: double;
-    border-width: 5px;
-    border-color: gainsboro;
-    box-sizing: border-box;
-    font-size: 10px;
-  }
+#default-btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  font-family: 'Old Standard TT', serif;
+  text-align: center;
+  font-size: medium;
+  margin-top: 20px;
+  /* background-color: black; */
+  color: white;
+  border-style: double;
+  border-width: 5px;
+  border-color: gainsboro;
+  box-sizing: border-box;
+  font-size: 10px;
+}
 
-  .leopard-btn {
-    width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    font-family: 'Old Standard TT', serif;
-    text-align: center;
-    font-size: medium;
-    margin-top: 20px;
-    background-image: url("https://i.pinimg.com/originals/ba/60/9d/ba609dcf7e7e78e9fa4198b392c138db.jpg");
-    color: white;
-    border-style: double;
-    border-width: 5px;
-    border-color: gainsboro;
-    box-sizing: border-box;
-    font-size: 10px;
-  }
+#leopard-btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  font-family: 'Old Standard TT', serif;
+  text-align: center;
+  font-size: medium;
+  margin-top: 20px;
+  background-image: url("https://i.pinimg.com/originals/ba/60/9d/ba609dcf7e7e78e9fa4198b392c138db.jpg");
+  color: white;
+  border-style: double;
+  border-width: 5px;
+  border-color: gainsboro;
+  box-sizing: border-box;
+  font-size: 10px;
+}
 
-  .lisa-btn {
-    width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    font-family: 'Old Standard TT', serif;
-    text-align: center;
-    font-size: medium;
-    margin-top: 20px;
-    background-image: url("http://wallpaperset.com/w/full/c/e/0/20779.jpg");
-    color: white;
-    border-style: double;
-    border-width: 5px;
-    border-color: gainsboro;
-    box-sizing: border-box;
-    font-size: 10px;
-  }
+#lisa-btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  font-family: 'Old Standard TT', serif;
+  text-align: center;
+  font-size: medium;
+  margin-top: 20px;
+  background-image: url("http://wallpaperset.com/w/full/c/e/0/20779.jpg");
+  color: white;
+  border-style: double;
+  border-width: 5px;
+  border-color: gainsboro;
+  box-sizing: border-box;
+  font-size: 10px;
+}
 
-  #show-note {
-    display: none;
-  }
+#show-note {
+  display: none;
+}
+
+.theme-buttons {
+  text-align: center;
+}
