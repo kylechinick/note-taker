@@ -72,6 +72,19 @@ function showNote(noteId) {
   buttons.append("<button class='deleteButton' id=" + + note.id + ">Delete</button>");
 }
 
+function saveEdits() {
+
+  const editElem = document.getElementById("edit");
+  const userVersion = editElem.innerHTML;
+  localStorage.userEdits = userVersion;
+  document.getElementById("update").innerHTML = "Edits saved!";
+}
+
+function checkEdits() {
+  if (localStorage.userEdits != null)
+    document.getElementById("edit").innerHTML = localStorage.userEdits;
+}
+
 function attachContactListeners() {
   $("ul#entries").on("click", "li", function () {
     showNote(this.id);
@@ -83,19 +96,20 @@ function attachContactListeners() {
   });
 }
 
+
 $(document).ready(function () {
-  
-  $("button#default-btn").click(function() {
+
+  $("button#default-btn").click(function () {
     $("body").removeClass();
     $("body").addClass("default");
   });
 
-  $("button#leopard-btn").click(function() {
+  $("button#leopard-btn").click(function () {
     $("body").removeClass();
     $("body").addClass("leopard");
   });
 
-  $("button#lisa-btn").click(function() {
+  $("button#lisa-btn").click(function () {
     $("body").removeClass();
     $("body").addClass("lisa");
   });
@@ -116,6 +130,8 @@ $(document).ready(function () {
     const newNote = new Note(inputtedTitle, inputtedDate, inputtedTopic, inputtedContent);
     noteBook.addNote(newNote);
     displayNoteDetails(noteBook);
+    checkEdits(this.id);
+    saveEdits(this.id);
 
   });
 });
