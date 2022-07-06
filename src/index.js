@@ -94,6 +94,8 @@ $(document).ready(function () {
 
     if (localStorage.getItem('noteBookKey')) {
       localData = JSON.parse(localStorage.getItem('noteBookKey'));
+      noteBook.entries = localData.entries;
+      noteBook.currentId = localData.currentId;
     }
     const inputtedTitle = $('input#new-title').val();
     const inputtedDate = $('input#new-date').val();
@@ -112,5 +114,7 @@ $(document).ready(function () {
     noteBook.addNote(newNote);
     displayNoteDetails(noteBook);
     localStorage.setItem('noteBookKey', JSON.stringify(noteBook));
+    localData = JSON.parse(localStorage.getItem('noteBookKey'));
+    console.log(localData.entries);
   });
 });
