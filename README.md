@@ -1,8 +1,8 @@
 
-# _ Note-Taker _
+# __NoteBook__
 #### Contributors: _**Kai Kohlsdorf, Matt Wilkinson, Sandra Tena, Kyle Chinick, Claire Thorington**_
 
-#### _ A note-taking app _
+#### __A note-taking app__
 
 ## Technologies Used
 
