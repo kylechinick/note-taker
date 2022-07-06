@@ -2,54 +2,107 @@ body {
   background-color: black;
   background-image: url("https://i.pinimg.com/736x/b1/23/d6/b123d670a63a1bb746971e43327e622b.jpg");
   font-family: 'Old Standard TT', serif;
+
+}
+
+.navbar {
+  width: 250px;
+  height: 100%;
+  margin: 2%;
+  align-content: center;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-top: 80px;
+  border: none;
+  padding: 2%;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  border-radius: 25px;
+
+}
+
+nav a:link,
+nav a:visited,
+nav a:hover,
+nav a:active {
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: white;
+  color: black;
+  border-style: double;
+  border-width: 5px;
+  border-color: black;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 10px;
+
 }
 
 .default {
   background-color: black;
   font-family: 'Old Standard TT', serif;
+
 }
 
 .leopard {
   background-image: url("https://i.pinimg.com/originals/ba/60/9d/ba609dcf7e7e78e9fa4198b392c138db.jpg");
   font-family: 'Old Standard TT', serif;
+
 }
 
 .lisa {
   background-image: url("https://cdn.wallpapersafari.com/6/46/qaJsDY.jpg");
   font-family: 'Old Standard TT', serif;
+
 }
 
 h1 {
   font-weight: bold;
-  font-size: 50px;
+  font-size: 40px;
   background-color: white;
+  color: black;
+  border-style: double;
+  border-width: 5px;
+  border-color: black;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 10px;
+
 
 }
 
 h2 {
   font-weight: bold;
   font-size: 30px;
-  background-color: white;
+
+
 
 }
 
 h3 {
   font-weight: bold;
   font-size: 20px;
-  background-color: white;
- 
+
+
 }
 
 .container {
   border-radius: 25px;
   background-color: white;
-  /* background-image: url("https://i.etsystatic.com/26706693/r/il/8baf51/2938976582/il_fullxfull.2938976582_s8th.jpg"); */
+  /* background-image: url(../../assets/images/lines.jpg); */
   background-size: 100%;
-  padding: 7%;
-  width: 70%;
+  padding: 5%;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 25px;
   display: block;
   text-align: left;
@@ -57,6 +110,14 @@ h3 {
   border-width: 5px;
   border-color: gainsboro;
   box-sizing: border-box;
+  margin-left: 25%;
+  max-width: 75%;
+  text-align: left;
+  height: auto;
+  width: auto\9;
+  position: relative;
+  z-index: 1;
+
 }
 
 #new-title,
@@ -70,8 +131,9 @@ h3 {
   text-align: left;
   font-size: 20px;
   padding: 5px;
-  background-color: white;
+
   text-align: center;
+
 }
 
 #new-content {
@@ -82,7 +144,8 @@ h3 {
   text-align: left;
   font-size: medium;
   padding: 5px;
-  background-color: white;
+
+
 }
 
 .btn-primary {
@@ -100,6 +163,7 @@ h3 {
   border-width: 5px;
   border-color: gainsboro;
   box-sizing: border-box;
+
 }
 
 #default-btn {
@@ -116,6 +180,7 @@ h3 {
   border-color: gainsboro;
   box-sizing: border-box;
   font-size: 12px;
+
 }
 
 #leopard-btn {
@@ -133,6 +198,7 @@ h3 {
   border-color: gainsboro;
   box-sizing: border-box;
   font-size: 12px;
+
 }
 
 #lisa-btn {
@@ -150,27 +216,28 @@ h3 {
   border-color: gainsboro;
   box-sizing: border-box;
   font-size: 12px;
+
 }
 
-#save, .deleteButton {
-    width: 100px;
-    height: 25px;
-    border-radius: 5px;
-    font-family: 'Old Standard TT', serif;
-    text-align: center;
-    font-size: medium;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    background-color: black;
-    color: white;
-    border-style: double;
-    border-width: 5px;
-    border-color: gainsboro;
-    box-sizing: border-box;
-    font-size: 12px;
-  }
+#save,
+.deleteButton {
+  width: 100px;
+  height: 25px;
+  border-radius: 5px;
+  font-family: 'Old Standard TT', serif;
+  text-align: center;
+  font-size: medium;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: black;
+  color: white;
+  border-style: double;
+  border-width: 5px;
+  border-color: gainsboro;
+  box-sizing: border-box;
+  font-size: 12px;
 
-
+}
 
 #show-note {
   display: none;
@@ -182,13 +249,16 @@ h3 {
   border-width: 5px;
   border-color: gainsboro;
   box-sizing: border-box;
+
 }
 
 #instructions {
   font-size: 12px;
   font-style: italic;
+
 }
 
 .theme-buttons {
-  text-align: center;
+  text-align: right;
+
 }
