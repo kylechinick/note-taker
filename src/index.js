@@ -96,9 +96,6 @@ function attachContactListeners() {
     $('#show-note').hide();
     displayNoteDetails(noteBook);
   });
-}
-
-$(document).ready(function () {
   $('button#default-btn').click(function () {
     $('body').removeClass();
     $('body').addClass('default');
@@ -113,19 +110,30 @@ $(document).ready(function () {
     $('body').removeClass();
     $('body').addClass('lisa');
   });
+
+  $('button#delete-btn').click(function () {
+    localStorage.removeItem('noteBookKey');
+  });
+}
+
+
+
+$(document).ready(function () {
   attachContactListeners();
+
+  if (localStorage.getItem('noteBookKey')) {
+    localData = JSON.parse(localStorage.getItem('noteBookKey'));
+    noteBook.entries = localData.entries;
+    noteBook.currentId = localData.currentId;
+    displayNoteDetails(noteBook);
+  }
+
   $('form#new-note').submit(function (event) {
     event.preventDefault();
 
-    if (localStorage.getItem('noteBookKey')) {
-      localData = JSON.parse(localStorage.getItem('noteBookKey'));
-      noteBook.entries = localData.entries;
-      noteBook.currentId = localData.currentId;
-    }
-
     console.log(noteBook);
     const inputtedTitle = $('input#new-title').val();
-    const inputtedDate = $('input#new-date').val();
+    const inputtedDate = Date(Date.now()); //$('input#new-date').val();
     const inputtedTopic = $('select#new-topic').val();
     const inputtedContent = $('#new-content').val();
     console.log(inputtedContent);
