@@ -75,17 +75,12 @@ function showNote(noteId) {
   );
 }
 
-function saveEdits() {
-  const editElem = document.getElementById('edit');
-  const userVersion = editElem.innerHTML;
-  localStorage.userEdits = userVersion;
-  document.getElementById('update').innerHTML = 'Edits saved!';
-}
-
-function checkEdits() {
-  if (localStorage.userEdits != null)
-    document.getElementById('edit').innerHTML = localStorage.userEdits;
-}
+// function saveEdits() {
+//   const editElem = document.getElementById('edit');
+//   const userVersion = editElem.innerHTML;
+//   localStorage.userEdits = userVersion;
+//   document.getElementById('update').innerHTML = 'Edits saved!';
+// }
 
 function attachContactListeners() {
   $('ul#entries').on('click', 'li', function () {
@@ -111,9 +106,18 @@ function attachContactListeners() {
     $('body').addClass('lisa');
   });
 
+  // $('button#delete-btn').click(function () {
+  //   localStorage.removeItem('noteBookKey');
+  // });
+
   $('button#delete-btn').click(function () {
     localStorage.removeItem('noteBookKey');
+    $('ul#entries').html('');
+    noteBook.entries = {};
+    noteBook.currentId = 0;
   });
+
+  
 }
 
 
@@ -121,7 +125,7 @@ function attachContactListeners() {
 $(document).ready(function () {
   attachContactListeners();
 
-  if (localStorage.getItem('noteBookKey')) {
+  if(localStorage.getItem('noteBookKey')) {
     localData = JSON.parse(localStorage.getItem('noteBookKey'));
     noteBook.entries = localData.entries;
     noteBook.currentId = localData.currentId;
@@ -155,31 +159,31 @@ $(document).ready(function () {
     localData = JSON.parse(localStorage.getItem('noteBookKey'));
     console.log(localData.entries);
 
-    checkEdits(this.id);
-    saveEdits(this.id); 
+   
+    // saveEdits(this.id);
   });
 
   function initSparkling() {
-    let sparkling = function() {
-      $('.sparkling').each(function() {
-          let sparklingElement = $(this);
-          let stars = sparklingElement.find('.star');
+    let sparkling = function () {
+      $('.sparkling').each(function () {
+        let sparklingElement = $(this);
+        let stars = sparklingElement.find('.star');
 
-          if(stars.length > 5) {
-              stars.each(function(index) {
-                  if(index === 0) {
-                      $(this).remove();
-                  }
-              });
-          }
-          sparklingElement.append(addStar());
+        if (stars.length > 5) {
+          stars.each(function (index) {
+            if (index === 0) {
+              $(this).remove();
+            }
+          });
+        }
+        sparklingElement.append(addStar());
       });
 
       let rand = Math.round(Math.random() * 700) + 100;
       setTimeout(sparkling, rand);
-      };
+    };
 
-    let addStar = function() {
+    let addStar = function () {
       const color = "#FFC700";
       const svgPath = 'M26.5 25.5C19.0043 33.3697 0 34 0 34C0 34 19.1013 35.3684 26.5 43.5C33.234 50.901 34 68 34 68C34 68 36.9884 50.7065 44.5 43.5C51.6431 36.647 68 34 68 34C68 34 51.6947 32.0939 44.5 25.5C36.5605 18.2235 34 0 34 0C34 0 33.6591 17.9837 26.5 25.5Z';
       let size = Math.floor(Math.random() * 20) + 10;
@@ -187,13 +191,13 @@ $(document).ready(function () {
       let left = Math.floor(Math.random() * 100);
 
       return '<span class="star" style="top:' + top + '%; left:' + left + '%;">'
-      + '<svg width="' + size + '" height="' + size + '" viewBox="0 0 68 68" fill="none">'
-      + '<path d="' + svgPath + '" fill="' + color + '" /></svg></span>';
+        + '<svg width="' + size + '" height="' + size + '" viewBox="0 0 68 68" fill="none">'
+        + '<path d="' + svgPath + '" fill="' + color + '" /></svg></span>';
     };
 
     sparkling();
   }
-  $(function() {
+  $(function () {
     initSparkling();
   });
 

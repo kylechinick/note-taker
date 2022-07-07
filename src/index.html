@@ -9,12 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap" rel="stylesheet">
 </head>
 
-<body onload="checkEdits()">
-  <div class="theme-buttons">
-    <button class="btn default" id="default-btn">Default</button>
-    <button class="btn leopard" id="leopard-btn">Leopard</button>
-    <button class="btn lisa" id="lisa-btn">Lisa Frank</button>
-  </div>
+<body>
   <nav class="navbar">
     <img src="https://pixy.org/src/52/thumbs350/529862.jpg" width=50% class="pencil" alt="A photo of a pencil">
     <hr>
@@ -22,15 +17,22 @@
     <hr>
     <br>
     <div class="nav-links">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="rainbow rainbow-1">Home</a>
       <br>
       <br>
-      <a href="notes.html">Saved Notes</a>
+      <a href="#saved-notes-section" class="rainbow rainbow-1">Saved Notes</a>
+    </div>
+    <div class="theme-buttons">
+      <br>
+      <h3>Themes</h3>
+      <button class="btn default" id="default-btn">Default</button>
+      <br>
+      <button class="btn leopard" id="leopard-btn">Leopard</button>
+      <br>
+      <button class="btn lisa" id="lisa-btn">Lisa Frank</button>
     </div>
   </nav>
-
   <div class="container">
-    
     <div class="row">
       <div class="col-md-6">
         <hr>
@@ -64,36 +66,34 @@
             <h3><label for="new-content">Note</label></h3>
 
             <textarea id="new-content" cols="100" rows="8" required></textarea>
+            <button class="rainbow rainbow-1" type="submit">Add Note</button>
+            <br>
           </div>
       </div>
-      
-        <a class="rainbow rainbow-1">Add Note</a>
-  
-      </div>
-      </form>
-      <button id="delete-btn" class="btn-primary">Delete Local Storage</button>
-      <hr>
-
-      <h2>Saved <span class=sparkling>notes</span></h2>
-
-      <ul id="entries">
-      </ul>
     </div>
+    </form>
+    <br>
+    <hr>
+    <h2 id="saved-notes-section">Saved <span class=sparkling>notes</span></h2>
+    <ul id="entries">
+    </ul>
     <div class="col-md-6">
       <div id="show-note">
-        <div id="edit" contenteditable="true">
-          <p><span class="title"></span></p>
-          <p><span class="date"></span></p>
-          <p><span class="topic"></span></p>
-          <p><span class="content"></span></p>
+        <div id="edit" contenteditable="false">
+          <p>Title: <span class="title"></span></p>
+          <p>Date: <span class="date"></span></p>
+          <p>Topic: <span class="topic"></span></p>
+          <p>Content: <span class="content"></span></p>
         </div>
-        <div id="instructions">To edit a note, click note text.</div>
-        <input type="button" value="Save edits" id="save" onclick="saveEdits()" />
+        <!-- <div id="instructions">To edit a note, click note text.</div>
+        <input type="button" value="Save edits" id="save" onclick="saveEdits()" /> -->
         <!-- <div id="update"></div> -->
         <div id="buttons">
         </div>
       </div>
+      <button id="delete-btn" class="btn-primary rainbow rainbow-1" >Delete Local Storage</button>
     </div>
+  </div>
   </div>
   </div>
   </div>
