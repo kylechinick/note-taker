@@ -2,12 +2,11 @@ body {
   background-color: black;
   background-image: url("https://i.pinimg.com/736x/b1/23/d6/b123d670a63a1bb746971e43327e622b.jpg");
   font-family: 'Old Standard TT', serif;
-
 }
 
 .navbar {
   width: 250px;
-  height: 100%;
+  height: 75%;
   margin: 2%;
   align-content: center;
   background-color: black;
@@ -22,7 +21,6 @@ body {
   top: 0;
   left: 0;
   border-radius: 25px;
-
 }
 
 nav a:link,
@@ -45,25 +43,21 @@ nav a:active {
   box-sizing: border-box;
   padding: 10px;
   border-radius: 10px;
-
 }
 
 .default {
   background-color: black;
   font-family: 'Old Standard TT', serif;
-
 }
 
 .leopard {
   background-image: url("https://i.pinimg.com/originals/ba/60/9d/ba609dcf7e7e78e9fa4198b392c138db.jpg");
   font-family: 'Old Standard TT', serif;
-
 }
 
 .lisa {
   background-image: url("https://cdn.wallpapersafari.com/6/46/qaJsDY.jpg");
   font-family: 'Old Standard TT', serif;
-
 }
 
 h1 {
@@ -77,23 +71,16 @@ h1 {
   box-sizing: border-box;
   padding: 10px;
   border-radius: 10px;
-
-
 }
 
 h2 {
   font-weight: bold;
   font-size: 30px;
-
-
-
 }
 
 h3 {
   font-weight: bold;
   font-size: 20px;
-
-
 }
 
 .container {
@@ -117,7 +104,6 @@ h3 {
   width: auto\9;
   position: relative;
   z-index: 1;
-
 }
 
 #new-title,
@@ -131,9 +117,7 @@ h3 {
   text-align: left;
   font-size: 20px;
   padding: 5px;
-
   text-align: center;
-
 }
 
 #new-content {
@@ -144,8 +128,6 @@ h3 {
   text-align: left;
   font-size: medium;
   padding: 5px;
-
-
 }
 
 .btn-primary {
@@ -163,7 +145,6 @@ h3 {
   border-width: 5px;
   border-color: gainsboro;
   box-sizing: border-box;
-
 }
 
 #default-btn {
@@ -180,7 +161,6 @@ h3 {
   border-color: gainsboro;
   box-sizing: border-box;
   font-size: 12px;
-
 }
 
 #leopard-btn {
@@ -198,7 +178,6 @@ h3 {
   border-color: gainsboro;
   box-sizing: border-box;
   font-size: 12px;
-
 }
 
 #lisa-btn {
@@ -216,7 +195,6 @@ h3 {
   border-color: gainsboro;
   box-sizing: border-box;
   font-size: 12px;
-
 }
 
 #save,
@@ -236,7 +214,6 @@ h3 {
   border-color: gainsboro;
   box-sizing: border-box;
   font-size: 12px;
-
 }
 
 #show-note {
@@ -249,16 +226,13 @@ h3 {
   border-width: 5px;
   border-color: gainsboro;
   box-sizing: border-box;
-
 }
 
 #instructions {
   font-size: 12px;
   font-style: italic;
-
 }
 
 .theme-buttons {
   text-align: right;
-
 }
