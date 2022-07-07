@@ -116,11 +116,7 @@ function attachContactListeners() {
     noteBook.entries = {};
     noteBook.currentId = 0;
   });
-
-  
 }
-
-
 
 $(document).ready(function () {
   attachContactListeners();
@@ -134,17 +130,13 @@ $(document).ready(function () {
 
   $('form#new-note').submit(function (event) {
     event.preventDefault();
-
-    console.log(noteBook);
     const inputtedTitle = $('input#new-title').val();
-    const inputtedDate = Date(Date.now()); //$('input#new-date').val();
+    const inputtedDate = Date(Date.now()); 
     const inputtedTopic = $('select#new-topic').val();
     const inputtedContent = $('#new-content').val();
-    console.log(inputtedContent);
     $('input#new-title').val('');
-    $('input#new-date').val('');
-    $('input#new-topic').val('');
-    $('input#new-content').val('');
+    $('select#new-topic').val('');
+    $('textarea#new-content').val('');
 
     const newNote = new Note(
       inputtedTitle,
@@ -157,10 +149,6 @@ $(document).ready(function () {
     displayNoteDetails(noteBook);
     localStorage.setItem('noteBookKey', JSON.stringify(noteBook));
     localData = JSON.parse(localStorage.getItem('noteBookKey'));
-    console.log(localData.entries);
-
-   
-    // saveEdits(this.id);
   });
 
   function initSparkling() {
